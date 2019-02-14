@@ -1,6 +1,8 @@
 # String Compression
 # Run time: O(N)
 # Space complexity: O(N)
+import unittest
+
 def stringCompression(s):
     compressed = ''
     charCount = 0
@@ -17,6 +19,20 @@ def stringCompression(s):
         return s
     return compressed
 
-print(stringCompression("abbbccccddddddd"))
+class Test(unittest.TestCase):
+    data = [
+        ('aabbcc', 'a2b2c2'),
+        ('a', 'a'),
+        ('bb', 'b2'),
+        ('', ''),
+    ]
+
+    def test_one_away(self):
+        for [test_s1, expected] in self.data:
+            actual1 = stringCompression(test_s1)
+            self.assertEqual(actual1, expected)
+
+if __name__ == "__main__":
+    unittest.main()
 
 
