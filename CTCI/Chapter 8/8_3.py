@@ -44,4 +44,4 @@ def magicIndexHelper(arr, low, high):
 
 
 
-print(magicIndexWithRepeats([1, 1, 1, 2, 3]))
+print(magicIndex([1, 1, 1, 2, 3]))
